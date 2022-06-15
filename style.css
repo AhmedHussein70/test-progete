@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+  margin: 0%;
+  padding: 0;
+  background-color: #525659;
+}
+#page {
+  width: 60%;
+  /* border: 1px solid blue; */
+  margin: auto;
+}
+header {
+  width: 60%;
+  height: 55px;
+  /* border: 1px solid #fff; */
+  position: fixed;
+  background-color: #172037;
+  color: #c7a969;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .left {
+  display: flex;
+  width: 70%;
+  /* border: 1px solid #fff; */
+}
+header .logo {
+  display: inline-block;
+  width: 120px;
+  height: 53px;
+}
+header .logo img {
+  width: 100%;
+  height: 100%;
+  border: #c7a969 1px solid;
+}
+header ul {
+  width: 70%;
+  list-style: none;
+  display: flex;
+  /* border: #fff solid; */
+  justify-content: space-between;
+  font-size: 13px;
+  margin-left: 10px;
+}
+header ul li {
+  padding: 16px 5px;
+  cursor: pointer;
+}
+header ul li span {
+  padding-bottom: 10px;
+}
+header ul li:hover span {
+  border-bottom: 2px solid #c7a969;
+  padding-bottom: 1px;
+  transition: all 0.3s;
+}
+.right {
+  position: relative;
+}
+.existing {
+  padding-right: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #c8a75f;
+}
+.existing:hover .fa-bars {
+  opacity: 0;
+
+}
+
+.existing::after{
+  transform: rotate(0deg);
+  transition: all 0.3s;
+  top: 0px;
+  left: 0px;
+}
+.existing::before{
+    transform: rotate(0deg);
+    transition: all 0.3s;
+  }
+
+
+.background-1 {
+  width: 100%;
+  margin-bottom: 5px;
+  box-shadow: 0 0px 10px 0 #fff;
+}
+.background-1 img {
+  width: 100%;
+  border-radius: 20px;
+}
+.existing::after {
+    content: "";
+    position: absolute;
+    width: 29px;
+    height: 2px;
+    top: 13px;
+    left: -3px;
+    transform: rotate(41deg);
+    background-color: #fff;
+    opacity: 0;
+    
+  }
+  .existing::before {
+    content: "";
+    position: absolute;
+    width: 29px;
+    height: 2px;
+    top: 13px;
+    right: -3px;
+    transform: rotate(0deg);
+    background-color: #fff;
+    transition: all 0.3s;
+    opacity: 0;
+  }
+.existing:hover::after {
+    transform:rotate(45deg);
+    opacity: 1;
+    right: 0;
+}
+
+
+.existing:hover::before {
+    transform:rotate(-45deg);
+    left: 0;
+    opacity: 1;
+}
+
